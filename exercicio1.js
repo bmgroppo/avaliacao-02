@@ -1,8 +1,8 @@
 
 function calculadoraAvancada() {
     let operacao = prompt("Digite a operação desejada: Soma (+), Subtração (-), Multiplicação (*), Divisão (/), Resto da Divisão (%), Potênciação (**):");
-    let num1 = parseInt(Number(prompt("Digite o primeiro número:")));
-    let num2 = parseInt(Number(prompt("Digite o segundo número:")));
+    let num1 = Number(prompt("Digite o primeiro número:"));
+    let num2 = Number(prompt("Digite o segundo número:"));
 
     if (isNaN(num1) || isNaN(num2)) {
         document.writeln("Por favor, insira apenas números válidos!");
