@@ -1,22 +1,19 @@
+// Questão 8 – Média com Entradas Ilimitadas 
+// Função: mediaAritmetica() 
+// Descrição: Peça números até o usuário digitar "fim". Calcule a média dos números inseridos com while. 
 function mediaAritmetica() {
     let soma = 0;
     let quantidade = 0;
 
     while (true) {
-        let entrada = prompt(`Digite quantos números quiser para calcular a média deles: \n(digite "fim" para interromper):`);
+        let entrada = prompt(`Digite quantos números quiser para calcular a média deles: \n    (digite "fim" para interromper):`);
 
         if (entrada.toLowerCase() === "fim") {
             break;
         }
-
         let numero = Number(entrada);
 
-        if (isNaN(numero)) {
-            document.writeln("Por favor, insira apenas números válidos!");
-            continue;
-        }
-
-        soma += numero;
+        soma = soma + numero;
         quantidade++;
     }
 
@@ -27,6 +24,3 @@ function mediaAritmetica() {
         document.writeln("Nenhum número foi inserido!");
     }
 }
-
-
-// ✔ Loop infinito (while true) → O usuário pode inserir números até digitar "fim".

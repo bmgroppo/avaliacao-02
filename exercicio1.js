@@ -1,14 +1,11 @@
-
+// Questão 1 – Calculadora Avançada 
+// Função: calculadoraAvancada() 
+// Descrição:  Peça dois números e a operação desejada (+, -, *, /, %, **). Use if/else para realizar a operação. Mostre o resultado com 
+// document.write(). 
 function calculadoraAvancada() {
     let operacao = prompt("Digite a operação desejada: Soma (+), Subtração (-), Multiplicação (*), Divisão (/), Resto da Divisão (%), Potênciação (**):");
     let num1 = Number(prompt("Digite o primeiro número:"));
     let num2 = Number(prompt("Digite o segundo número:"));
-
-    if (isNaN(num1) || isNaN(num2)) {
-        document.writeln("Por favor, insira apenas números válidos!");
-        return;
-    }
-
     let resultado;
 
     if (operacao === "+") {
@@ -18,20 +15,13 @@ function calculadoraAvancada() {
     } else if (operacao === "*") {
         resultado = num1 * num2;
     } else if (operacao === "/") {
-        if (num2 !== 0) {
-            resultado = num1 / num2;
-        } else {
-            document.writeln("Erro: divisão por zero!");
-            return;
-        }
+        resultado = num1 / num2;
     } else if (operacao === "%") {
         resultado = num1 % num2;
-    } else if (operacao === "**") {
+    } else if (operacao === "**"){
         resultado = num1 ** num2;
     } else {
         document.writeln("Operação inválida!");
-        return;
     }
-
     document.writeln(`O resultado da operação é: ${resultado}`);
 }

@@ -1,10 +1,13 @@
+// Questão 2 – Classificação Etária 
+// Função: classificarIdade() 
+// Descrição: Peça a idade do usuário e classifique em: 
+// • Até 12: Criança 
+// • 13 a 17: Adolescente 
+// • 18 a 59: Adulto 
+// • 60 ou mais: Idoso 
 function classificarIdade() {
     let idade = Number(prompt("Digite sua idade:"));
 
-    if (isNaN(idade) || idade < 0) {
-        document.writeln("Por favor, insira uma idade válida!");
-        return;
-    }
 
     if (idade <= 12) {
         document.writeln(`Você é uma Criança de ${idade} anos.`);
